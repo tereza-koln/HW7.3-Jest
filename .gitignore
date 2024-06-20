@@ -1,0 +1,4 @@
+.vscode/
+*.code-workspace
+coverage/
+node_modules/
