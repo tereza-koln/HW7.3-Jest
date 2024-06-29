@@ -37,21 +37,40 @@ describe("Books names test suit", () => {
     expect(output).toEqual(expected);
   });
 
-  it("Sorting a single book name should return the same array", () => {
-    const input = ["Властелин Колец"];
+  it("Books names should not be sorted2", () => {
+    const input = [
+       "Властелин Колец",
+       "Властелин Колец",
+       "Властелин Колец",
+    ];
+    
     const output = sorting.sortByName(input);
-
-    const expected = ["Властелин Колец"];
-
-    expect(output).toEqual(expected);
+ 
+    const expected = [     
+       "Властелин Колец",
+       "Властелин Колец",
+       "Властелин Колец",
+     ];
+ 
+     expect(output).toEqual(expected);
   });
 
+   it("Sorting a single book name should return the same array", () => {
+    const input = ["Властелин Колец"];
+    const output = sorting.sortByName(input);
+  
+    const expected = ["Властелин Колец"];
+  
+    expect(output).toEqual(expected);
+  });
+  
+ 
   it("Sorting an empty array should return an empty array", () => {
     const input = [];
     const output = sorting.sortByName(input);
-
+  
     const expected = [];
-
+  
     expect(output).toEqual(expected);
-  });
+  })
 });
